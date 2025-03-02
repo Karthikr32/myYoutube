@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    font-family: "Roboto", Arial, sans-serif;
+    padding-top: 103px; /*Its helps to separate the "Header" and "Grid-container"*/
+    padding-left: 118px;
+    padding-right: 30px;
+    background-color: rgba(211, 211, 211, 0.196);
+  }
+  .thumbnail-1 {
+    width: 100%;
+    /* margin-bottom: 10px; */
+  }
+  .thumbnail-div{
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .para-head {
+    color: black;
+    /* width: 100%; */
+    /* margin-top: 8px; */
+    margin-bottom: 10px;
+    font-size: 17.5px;
+    font-weight: 500; /*it depends on how we customize and copied code from google fonts*/
+    line-height: 25px;
+  }
+  #para1 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.708);
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+  #para2 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.719);
+    margin-top: 5px;
+    cursor: auto;
+  }
+  /* .container-one {
+    display: inline-block;
+    width: 300px; by setting this width, it applies to the other elements inside the div element, althrough this div element takes up the whole width bcoz its a Block element;
+    vertical-align: top; included Vertical-align property to align the other container at the top
+    margin-right: 15px;
+  } */
+  .icon-one img {
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+  }
+  /* .icon-one {
+    display: inline-block;
+    width: 50px;                   
+    margin-right: 7px;
+    vertical-align: top;
+  } */
+  /*I just commanted all thes display: inline-block;
+    width: 50px;                   
+    margin-right: 7px;
+    vertical-align: top; Bcoz, of replacing it with using Grid CSS*/
+
+  .mini-info {
+    /* display: inline-block; */
+    width: 100%;
+  }
+  /*I just commanted all thes display: inline-block;
+    width: 240px;                   
+    Bcoz, of replacing it with using Grid CSS*/
+
+  .div-icon-info {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 10px;
+  }
+  .container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 55px;
+    column-gap: 20px;
+  }
+  @media screen and (max-width: 500px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: 1fr; 
+    }
+  }
+  @media screen and (max-width: 995px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+    }
+  }
+  @media screen and (min-width: 1000px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+    }
+  }
+  @media screen and (min-width: 1420px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+  }
+  /*Style Header section for our Project */
+  
+  .header-Section{ /*i m setting a width and height for our header*/
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 999; /*Higher z-index valued elements remains at the top */
+    border-bottom: 1px solid lightgray;
+  }
+  /*i m going to divide the Header into 3 parts
+  1.left-Section
+  2.mid-Section
+  3.right-Section*/
+  .left-Section{
+    /* background-color: rgb(184, 115, 115); */
+    width: 190px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+  }
+  .mid-Section{
+    /* background-color: rgb(125, 138, 197); */
+    flex: 1;
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  .right-Section{
+    /* background-color: rgb(185, 227, 166); */
+    width: 210px;
+    margin-right: 24px;
+    margin-left: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .three-Bars{
+    width: 30px; /*this is an image so only we can adjust it with width and height*/
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .youtube-logo{
+    height: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .search-bar{
+    height: 50px;
+    flex: 1;
+    min-width: 0;
+    width: 0;
+    border: 1px solid rgba(158, 155, 155, 0.495);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: inset 1px 2px 2px rgba(0,0,0,0.05);
+    -webkit-transition: 0.5s; /*Rare usage*/
+    outline: none; /*to remove the default outline border of the input field*/
+  }
+  .search-bar:focus{
+    border: 1.6px solid;
+    border-color: blue;
+  }
+  input[placeholder="Search"]{
+    font-size: 21px;
+    font-family: "Roboto", Arial, sans-serif;
+    padding-left: 12px;
+  }
+  .search-but{
+    width: 80px;
+    height: 50px;
+    margin-left: -1px; /*pull the search-but into left*/
+    border: 1px solid rgba(158, 155, 155, 0.495);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: rgba(201, 199, 199, 0.194);
+    box-shadow: inset 1px 2px 2px rgba(0,0,0,0.07); /*Iset means the shadow will applied inside the box*/
+    cursor: pointer;
+  }
+  .search-icon{
+    width: 32px;
+    margin-top: 5px;
+  }
+  .voice-but{
+    width: 54px;
+    height: 52px;
+    background-color: rgba(201, 199, 199, 0.126);
+    border-radius: 50px;
+    border: none;
+    margin-left: 10px;
+    box-shadow: inset 1px 2px 2px rgba(0,0,0,0.03);
+    cursor: pointer;
+  }
+  .voice-icon{
+    width: 30px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .create{
+    width: 30px; 
+    /* margin-left: 20px; */
+    cursor: pointer;
+  }
+  .boxes{
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .notification-bell{
+    width: 30px;
+    margin-left: 20px;
+    padding-top: 5px;
+    /* position: relative; */
+    cursor: pointer;
+  }
+  .notifications{
+    position: relative;
+    /* background-color: aqua; */
+    width: 70px;
+    height: 40px;
+  }
+  .profile{
+    width: 36px;
+    height: 36.5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: rgb(70, 8, 214);
+    font-size: 18px;
+    font-family: "Roboto", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .video-time{
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    right: 6px;
+    font-size: 15px;
+    padding: 4px 6px 4px 6px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+.notification-num{
+  background-color: rgb(197, 13, 13);
+  color: white;
+  border-radius: 50px;
+  width: 20px;
+  height: 17px;
+  /* font-weight: bold; */
+  font-family: "Roboto", Arial, sans-serif;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 1px;
+  position: absolute;
+  top: 5px;
+  right: 14px;
+}
+.side-bar{
+  background-color: white;
+  position: fixed;
+  left: 0px;
+  width: 89px;
+  top: 70px;
+  bottom: 1px;
+  border-right: 1px solid rgba(211, 211, 211, 0.178);
+  z-index: 999;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.side-bar>.div-home{
+  /* background-color: lightgray; */
+  height: 95px;
+  /* margin-bottom: 5px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar>div:hover{
+  background-color: rgba(211, 211, 211, 0.539);
+}
+.div-home img{
+  width: 30px;
+  margin-bottom: 8px;
+}
+.div-home div{
+  font-size: 12px;
+  font-family:  "Roboto", Arial, sans-serif;
+  font-weight: lighter;
+}
+.div-tooltip{
+  position: relative;
+}
+.search-tooltip{
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  width: 63px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 2px 5px 14px;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: white;
+  /* margin-top: 10px; */
+  position: absolute;
+  bottom: -55px; 
+  display: none;
+}
+.search-but:hover ~.search-tooltip{
+  display: block;
+}
+.voice-tooltip{
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  width: 170px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 4px 5px 15px;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: white;
+  /* margin-top: 10px; */
+  position: absolute;
+  bottom: -55px; 
+  left: -55px;
+  display: none;
+}
+.voice-but:hover~.voice-tooltip{
+  display: block; /*Button-ah :hover pannanumbothu button oda sibling "voice-tooltip" display aghanum!*/
+}
+.create-tooltip{
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 6px 5px 9px;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: white;
+  /* margin-top: 10px; */
+  position: absolute;
+  bottom: -60px; 
+  left: -20px;
+  display: none;
+}
+.create:hover~.create-tooltip{
+  display: block; /*That Icon-ah :hover pannanumbothu that icon-oda sibling "create-tooltip" display aghanum!*/
+}
+.apps-tooltip{
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  width: 110px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 2px 5px 14px;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: white;
+  /* margin-top: 10px; */
+  position: absolute;
+  bottom: -60px; 
+  left: -25px; 
+  display: none;
+}
+.boxes:hover~.apps-tooltip{
+  display: block; /*That Icon-ah :hover pannanumbothu that icon-oda sibling "apps-tooltip" display aghanum!*/
+}
+.bell-tooltip{
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  width: 90px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 8px 5px 8px;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: white;
+  /* margin-top: 10px; */
+  position: absolute;
+  bottom: -60px; 
+  left: -18px;
+  display: none;
+}
+.notification-bell:hover~.bell-tooltip{
+  display: block; /*That Icon-ah :hover pannanumbothu that icon-oda sibling "bell-tooltip" display aghanum!*/
+}
+.all-video-links{
+  text-decoration: none;
+}
+
