@@ -25,7 +25,7 @@ A YouTube clone project built using HTML and CSS focuses on replicating the basi
  - **Responsive Images:** Images, such as video thumbnails, are set to be responsive, adjusting their size based on the screen width to avoid breaking the layout.
 
 [Click here to view my Github repository](https://github.com/Karthikr32/myYoutube)     
-[Click here to view my Youtube Project UI](https://karthikr32.github.io/myYoutube/)
+[Click here to view my Youtube Project UI](https://karthikr32.github.io/myYoutube/YoutubeProject.html)
 
 
 
